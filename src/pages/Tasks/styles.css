@@ -1,0 +1,246 @@
+/* ---- RESET/BASIC STYLING ---- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  border: none;
+  min-height: 83.3px;
+}
+.container-task {
+  width: 100%;
+  margin-top: 80px;
+  max-width: calc(100% - ((100vw - 1232px) / 2));
+  margin-left: auto;
+  padding-right: 80px;
+}
+.deletar-card {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ---- FORM ---- */
+#todo-form {
+  padding: 32px 32px 0;
+}
+
+#todo-form input {
+  padding: 12px;
+  margin-right: 12px;
+  width: 225px;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: white;
+
+  font-size: 14px;
+  outline: none;
+}
+
+#todo-form button {
+  cursor: pointer;
+  padding: 12px 32px;
+
+  border-radius: 4px;
+  border: none;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  color: black;
+
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ---- BOARD ---- */
+.lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 16px;
+
+  padding: 24px 32px;
+
+  height: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.heading h3 {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 1px solid transparent;
+  transition: 0.2s;
+
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+}
+.heading input:focus {
+  border-radius: 2px;
+  border: 1px solid #0a7d00;
+}
+
+.swim-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  border-radius: 21px;
+  background: #c8e9c5;
+
+  padding: 12px;
+  width: 350px;
+  min-height: 120px;
+
+  flex-shrink: 0;
+}
+
+.task {
+  background: #f4f2ff;
+  color: black;
+
+  padding: 12px;
+  border-radius: 4px;
+
+  font-size: 16px;
+  cursor: move;
+  border-radius: 11px;
+}
+.task p {
+  color: #000;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.task button {
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+.task .deletar {
+  background: #f43c3c;
+  width: 45px;
+  height: 22px;
+}
+
+.task .edit {
+  width: 45px;
+  height: 22px;
+  background: #f4b53c;
+}
+.buttons_task {
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+}
+
+.task-container input {
+  background: #f4f2ff;
+  color: black;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: move;
+  border-radius: 11px;
+  border: none;
+  outline: none;
+  cursor: auto;
+}
+.task-container > div {
+  display: flex;
+  flex-direction: column;
+}
+.task-container > div > button {
+  margin-top: 8px;
+  border-radius: 4px;
+  height: 20px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  background-color: #f4b53c;
+  cursor: pointer;
+}
+
+.addTask {
+  margin-top: auto;
+  z-index: 1;
+
+  color: #555;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  background-color: transparent;
+  border: none;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.addTask img {
+  width: 12px;
+}
+
+@media (max-width: 768px) {
+  .container-task {
+    min-height: 80vh;
+    overflow-x: scroll;
+    padding: 0;
+  }
+  .lanes {
+    width: max-content;
+    padding-right: 32px;
+  }
+  .swim-lane{
+    width: 300px;
+  }
+}

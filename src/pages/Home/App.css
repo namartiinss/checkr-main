@@ -1,0 +1,19 @@
+.main {
+  padding-bottom: 100px;
+}
+.image-home img {
+  position: relative;
+  left: -100px;
+}
+.container {
+  max-width: 1232px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.container-home {
+  display: flex;
+}
+
